@@ -8,7 +8,8 @@
             ],
             "options": [
                 "Dealer",
-                "Distributor"
+                "Distributor",
+                "Other"
             ],
             "datatype": "Array",
             "required": 1,
