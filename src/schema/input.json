@@ -1,0 +1,522 @@
+{
+    "data": [
+        {
+            "name": "Outlet type",
+            "addMore": false,
+            "default": [
+                "Dealer"
+            ],
+            "options": [
+                "Dealer",
+                "Distributor"
+            ],
+            "datatype": "Array",
+            "required": 1,
+            "sequence": 1,
+            "component": "single_select",
+            "condition": {},
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Select outlet type",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Outlet Category",
+            "addMore": false,
+            "default": [
+                "Existing"
+            ],
+            "options": [
+                "Existing",
+                "Competition",
+                "Potential"
+            ],
+            "datatype": "Array",
+            "required": 1,
+            "sequence": 2,
+            "component": "single_select",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Select outlet category",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "assign_to",
+            "addMore": false,
+            "default": "",
+            "options": [],
+            "datatype": "String",
+            "required": 0,
+            "sequence": 3,
+            "component": "multi_select_db",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Assign to",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Name",
+            "addMore": false,
+            "default": "",
+            "options": [],
+            "datatype": "String",
+            "required": 1,
+            "sequence": 4,
+            "component": "textbox_string",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Enter outlet name",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Contact",
+            "addMore": true,
+            "default": [],
+            "options": [],
+            "datatype": "Object",
+            "required": 1,
+            "sequence": 5,
+            "component": "group",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": true,
+            "is_unique": [],
+            "placeholder": "",
+            "database_field": {},
+            "childComponents": [
+                {
+                    "name": "first_name",
+                    "addMore": false,
+                    "default": [],
+                    "options": [],
+                    "datatype": "String",
+                    "required": 1,
+                    "sequence": 1,
+                    "component": "textbox_string",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [],
+                    "placeholder": "Enter First Name",
+                    "database_field": {},
+                    "childComponents": []
+                },
+                {
+                    "name": "last_name",
+                    "addMore": false,
+                    "default": [],
+                    "options": [],
+                    "datatype": "String",
+                    "required": 1,
+                    "sequence": 2,
+                    "component": "textbox_string",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [],
+                    "placeholder": "Enter Last Name",
+                    "database_field": {},
+                    "childComponents": []
+                },
+                {
+                    "name": "role",
+                    "addMore": false,
+                    "default": [],
+                    "options": [],
+                    "datatype": "String",
+                    "required": 0,
+                    "sequence": 3,
+                    "component": "textbox_string",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [],
+                    "placeholder": "Enter Role",
+                    "database_field": {},
+                    "childComponents": []
+                },
+                {
+                    "name": "mobile_1",
+                    "addMore": false,
+                    "default": [],
+                    "options": [],
+                    "datatype": "String",
+                    "required": 1,
+                    "sequence": 4,
+                    "component": "textbox_mobile",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [
+                        "mobile_1",
+                        "mobile_2"
+                    ],
+                    "placeholder": "Enter contact number",
+                    "database_field": {},
+                    "childComponents": []
+                },
+                {
+                    "name": "mobile_2",
+                    "addMore": false,
+                    "default": [],
+                    "options": [],
+                    "datatype": "String",
+                    "required": 0,
+                    "sequence": 5,
+                    "component": "textbox_mobile",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [
+                        "mobile_1",
+                        "mobile_2"
+                    ],
+                    "placeholder": "Enter contact number 2",
+                    "database_field": {},
+                    "childComponents": []
+                },
+                {
+                    "name": "email",
+                    "addMore": false,
+                    "default": [],
+                    "options": [],
+                    "datatype": "String",
+                    "required": 0,
+                    "sequence": 6,
+                    "component": "textbox_string",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [],
+                    "placeholder": "Enter contact email",
+                    "database_field": {},
+                    "childComponents": []
+                }
+            ]
+        },
+        {
+            "name": "Gst number",
+            "addMore": false,
+            "default": [],
+            "options": [],
+            "datatype": "String",
+            "required": 0,
+            "sequence": 6,
+            "component": "textbox_string",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Enter GST number",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Pan number",
+            "datatype": "String",
+            "required": 0,
+            "sequence": 7,
+            "component": "textbox_string",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "is_unique": [],
+            "placeholder": "Enter PAN number",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Address",
+            "addMore": false,
+            "datatype": "Object",
+            "required": 1,
+            "sequence": 8,
+            "component": "group",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor",
+                    "Project/PVT Site",
+                    "Gov Project",
+                    "Fabricators"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": true,
+            "is_unique": [],
+            "placeholder": "",
+            "database_field": {},
+            "childComponents": [
+                {
+                    "name": "address_line_1",
+                    "addMore": false,
+                    "datatype": "String",
+                    "required": 1,
+                    "sequence": 1,
+                    "component": "textbox_string",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [],
+                    "placeholder": "Enter address line 1",
+                    "database_field": {},
+                    "childComponents": []
+                },
+                {
+                    "name": "city",
+                    "addMore": false,
+                    "datatype": "String",
+                    "required": 1,
+                    "sequence": 2,
+                    "component": "textbox_string",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [],
+                    "placeholder": "Enter city",
+                    "database_field": {},
+                    "childComponents": []
+                },
+                {
+                    "name": "state",
+                    "addMore": false,
+                    "datatype": "String",
+                    "required": 1,
+                    "sequence": 3,
+                    "component": "textbox_string",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [],
+                    "placeholder": "Enter state",
+                    "database_field": {},
+                    "childComponents": []
+                },
+                {
+                    "name": "district",
+                    "addMore": false,
+                    "datatype": "String",
+                    "required": 1,
+                    "sequence": 4,
+                    "component": "textbox_string",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [],
+                    "placeholder": "Enter district",
+                    "database_field": {},
+                    "childComponents": []
+                },
+                {
+                    "name": "pincode",
+                    "addMore": false,
+                    "datatype": "String",
+                    "required": 1,
+                    "sequence": 5,
+                    "component": "textbox_string",
+                    "condition": {},
+                    "isGrouped": false,
+                    "is_unique": [],
+                    "placeholder": "Enter pincode",
+                    "database_field": {},
+                    "childComponents": []
+                }
+            ]
+        },
+        {
+            "name": "Has Own Showroom",
+            "addMore": false,
+            "default": [
+                "No"
+            ],
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "datatype": "Boolean",
+            "required": 0,
+            "sequence": 9,
+            "component": "radio_button_boolean",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Do you have your own showroom?",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Years in business",
+            "addMore": false,
+            "default": [],
+            "options": [],
+            "datatype": "Double",
+            "required": 0,
+            "sequence": 10,
+            "component": "textbox_double",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Enter number of years in business",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Primary product deal in",
+            "addMore": false,
+            "default": [],
+            "options": [],
+            "datatype": "String",
+            "required": 0,
+            "sequence": 11,
+            "component": "textbox_string",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Enter primary product deal in",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Existing brands deal with",
+            "addMore": false,
+            "default": [],
+            "options": [],
+            "datatype": "String",
+            "required": 0,
+            "sequence": 12,
+            "component": "textbox_string",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Select existing brands dealing with",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Monthly purchase volume of kaka brand",
+            "addMore": false,
+            "default": [],
+            "options": [],
+            "datatype": "Double",
+            "required": 0,
+            "sequence": 13,
+            "component": "textbox_double",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Enter monthly purchase volume of Kaka brand",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Monthly purchase volume of other brand",
+            "addMore": false,
+            "default": [],
+            "options": [],
+            "datatype": "Double",
+            "required": 0,
+            "sequence": 14,
+            "component": "textbox_double",
+            "condition": {
+                "type": "ANY",
+                "value": [
+                    "Dealer",
+                    "Distributor"
+                ],
+                "field_name": "Outlet type"
+            },
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Enter monthly purchase volume of competitors brands",
+            "database_field": {},
+            "childComponents": []
+        },
+        {
+            "name": "Outlet Photo",
+            "addMore": false,
+            "default": [],
+            "options": [],
+            "datatype": "String",
+            "required": 0,
+            "sequence": 15,
+            "component": "attachment_camera",
+            "condition": {},
+            "isGrouped": false,
+            "is_unique": [],
+            "placeholder": "Select Images",
+            "database_field": {},
+            "childComponents": []
+        }
+    ]
+}

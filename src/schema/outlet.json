@@ -1,0 +1,36 @@
+{
+    "Outlet type": "Dealer",
+    "Outlet Category": "Existing",
+    "Contact": [
+        {
+            "First Name": "First Name",
+            "Last Name": "Last Name",
+            "Role": "Role",
+            "Mobile 1": "7882891988",
+            "Mobile 2": "7881726211",
+            "Email": "Email"
+        }
+    ],
+    "Address": [
+        {
+            "Address Line 1": "Address Line 1",
+            "City": "City",
+            "State": "State",
+            "District": "District",
+            "Pincode": "Pincode"
+        }
+    ],
+    "Has Own Showroom": false,
+    "assign_to": [
+        1
+    ],
+    "Name": "Outlet Name",
+    "Gst number": "GST Number",
+    "Pan number": "PAN Number",
+    "Years in business": 78,
+    "Primary product deal in": "Primary Product Deal in",
+    "Existing brands deal with": "Existing brands deal with",
+    "Monthly purchase volume of kaka brand": 78821,
+    "Monthly purchase volume of other brand": 78819,
+    "status": "active"
+}
